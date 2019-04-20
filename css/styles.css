@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css?family=Amaranth');
+
+:root {
+
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	outline: none;
+	box-sizing: border-box;
+	transition: all .1s ease-in-out;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+body, html {
+	min-height: 100%;
+	width: 100%;
+}
+
+html {
+	height: 100%;
+}
+
+.clear::after, .clear::before {
+	content: " ";
+	display: table;
+}
+
+.clear::after {
+	clear: both;
+}
+
+/* Main Styles */
+
+body {
+	background: lightblue;
+}
+.wrapper {
+	margin: 50px auto 0;
+	width: 450px;
+}
+
+.btn-show, .btn-hide, .song {
+	padding: 10px 20px; 
+	background: linear-gradient(to bottom, rgba(243,197,189,1) 0%,rgba(232,108,87,1) 50%,rgba(234,40,3,1) 51%,rgba(255,102,0,1) 75%,rgba(199,34,0,1) 100%);
+	border-radius: 10px;
+	color: #fff;
+	font-weight: 700;
+	font-family: 'Amaranth', sans-serif;
+	font-size: 21px;
+}
+
+.btn-show:hover, .btn-hide:hover {
+	background: linear-gradient(to bottom, rgba(234,40,3,1) 0%,rgba(234,40,3,1) 0%,rgba(255,102,0,1) 25%,rgba(199,34,0,1) 51%,rgba(232,108,87,1) 52%,rgba(232,108,87,1) 52%,rgba(243,197,189,1) 100%);
+}
+
+.song-list {
+	margin-top: 10px;
+}
+
+.song {
+/* 	width: 25%; */
+	font-size: 18px;
+	margin-bottom: 10px;
+	font-weight: 400;
+	position: relative;
+	cursor: pointer;
+}
+
+.song:hover {
+	transform: scale(1.1);
+	box-shadow: 0 4px 10px 1px rgba(0, 0, 0, .5)
+}
+
+.song::after {
+	content: '';
+	position: absolute;
+	right: 5px;
+	width:0;
+	height:0;
+	border: 10px solid transparent;
+	border-left: 10px solid #fff;
+}
+
+.song:hover::after {
+	border-left: 10px solid red; 
+}
